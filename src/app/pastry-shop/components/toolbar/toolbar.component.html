@@ -1,14 +1,59 @@
-<mat-toolbar>
-    <span class="toolbar-spacer">&nbsp;</span>
-    <button [routerLink]="['/pastry-shop/']" mat-fab extended color="accent">
-        <mat-icon>home</mat-icon>
-        Home
-    </button>
-    <span class="toolbar-spacer">&nbsp;</span>
-    <button [routerLink]="['/pastry-shop/about']" mat-fab extended color="accent">
-        <mat-icon>
-            question_mark
-        </mat-icon>
-        About Us
-    </button>
+<mat-toolbar color="accent">
+    <mat-toolbar-row></mat-toolbar-row>
+    <mat-toolbar-row fxLayout="row">
+        <span fxHide.xs="true" class="toolbar-spacer">&nbsp;</span>
+        <a fxHide.xs="true" mat-raised-button color="basic" [routerLink]="['/pastry-shop/']">
+            <mat-icon>home</mat-icon>
+            Home
+        </a>
+        <span>&nbsp;</span>
+        <a fxHide.xs="true" mat-raised-button color="basic" [routerLink]="['/pastry-shop/gallery']">
+            <mat-icon>cake</mat-icon>
+            Our products
+        </a>
+        <span>&nbsp;</span>
+        <a fxHide.xs="true" mat-raised-button color="basic" [routerLink]="['/pastry-shop/about']">
+            <mat-icon>question_mark</mat-icon>
+            About us
+        </a>
+        <span>&nbsp;</span>
+        <a fxHide.xs="true" mat-raised-button color="basic" [routerLink]="['/pastry-shop/contact']">
+            <mat-icon>contact_page</mat-icon>
+            Contact us
+        </a>
+        <span fxFlex.xs="42%">&nbsp;</span>
+
+        <!-- Showing the Hamburger-Menu on small screen -->
+        <button fxHide.gt-xs="true" mat-mini-fab color="basic" [matMenuTriggerFor]="mainMenu" aria-label="Toggle Menu for the Header">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <mat-menu fxHide.gt-xs="true" #mainMenu="matMenu" xPosition="before">
+            <button mat-menu-item>
+                <a mat-button [routerLink]="['/pastry-shop/']">
+                    <mat-icon>home</mat-icon>
+                    Home
+                </a>
+            </button>
+            <button mat-menu-item>
+                <a mat-button [routerLink]="['/pastry-shop/gallery']">
+                    <mat-icon>cake</mat-icon>
+                    Our products
+                </a>
+            </button>
+            <button mat-menu-item>
+                <a mat-button [routerLink]="['/pastry-shop/about']">
+                    <mat-icon>question_mark</mat-icon>
+                    About us
+                </a>
+            </button>
+            <button mat-menu-item>
+                <a mat-button [routerLink]="['/pastry-shop/contact']">
+                    <mat-icon>contact_page</mat-icon>
+                    Contact us
+                </a>
+            </button>
+        </mat-menu>
+
+    </mat-toolbar-row>
 </mat-toolbar>

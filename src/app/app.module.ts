@@ -1,4 +1,3 @@
-import { PastryShopComponent } from './pastry-shop/pastry-shop.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
