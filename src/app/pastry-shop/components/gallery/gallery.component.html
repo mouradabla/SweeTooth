@@ -1,1 +1,30 @@
-<p>gallery works!</p>
+<mat-tab-group color="accent">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="cupcake-tab-icon">cake</mat-icon>
+            Cupcakes
+        </ng-template>
+        <div class="products-wrapper" fxLayout="column" fxLayoutAlign="center none">
+            <h1>Cupcakes so good, you'll flip your lid!</h1>
+            <p>Browse our wide selection of delicious cupcakes, perfect for any occasion!</p>
+            <carousel fxLayoutAlign="center center" fxFlex="50" [cards]="products"></carousel>
+        </div>
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="wedding-tab-icon">thumb_up</mat-icon>
+            Wedding cakes
+        </ng-template>
+        <div class="products-wrapper">
+            <h1>Wedding cakes that will make your heart skip a beat!</h1>
+            <p>Find the perfect wedding cupcakes for your special day!</p>
+            <carousel fxLayoutAlign="center center" [cards]="products"></carousel>
+        </div>
+    </mat-tab>
+</mat-tab-group>
+<!-- <div class="products-container" fxLayout="column">
+    
+    <mat-divider [inset]="true"></mat-divider>
+    
+</div> -->

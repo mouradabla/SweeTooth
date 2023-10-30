@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agbalumo&family=Lobster&display=swap');
+
+.products-wrapper h1{
+    padding: 0 15px;
+    font-family: "Lobster", "Abril Fatface";
+    text-align: center;
+    font-size: 3em;
+    color: rgb(255 109 159);
+    text-shadow: 0 0 10px rgba(255, 109, 159, 0.1), 0 0 20px rgba(255, 109, 159, 0.2), 0 0 30px rgba(255, 109, 159, 0.1);
+}
+
+.products-wrapper p{
+    padding: 0 15px;
+    font-family: "Abril Fatface";
+    text-align: center;
+    font-size: 1.7em;
+    color: rgb(255 109 159);
+    // text-shadow: 0 0 10px rgba(255, 109, 159, 0.1), 0 0 20px rgba(255, 109, 159, 0.2), 0 0 30px rgba(255, 109, 159, 0.1);
+}
+carousel{
+    height: 100%;
+}
+
+.mdc-tab--active{
+    color: #f52d55;
+}
+
+@media (max-width: 768px){
+    .products-wrapper h1{
+        font-size: 2em;
+    }
+    .products-wrapper p{
+        font-size: 1em;
+    }
+}

@@ -12,6 +12,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { CarouselComponent } from './common/carousel.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,8 @@ const routes: Routes = [
     MainContentComponent,
     SideNavComponent,
     AboutUsComponent,
+    GalleryComponent,
+    CarouselComponent,
   ],
   imports: [
     CommonModule,

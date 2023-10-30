@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <main class="flex-item main" fxFlex="80">
         <router-outlet></router-outlet>
       </main>
-      <footer fxLayout="row" fxLayoutAlign="center center">
+      <footer fxFlex fxLayout="row" fxLayoutAlign="center center">
           <div class="footer">
             <p>&copy; {{ this.currentYear.getFullYear() }} SweeTooth</p>
           </div>
@@ -33,6 +33,11 @@ import { Component } from '@angular/core';
       padding:2.1rem;
       overflow-y: auto;
       text-align:justify;
+      background-image: linear-gradient(to top, #F7E1D7, #E9E9E9, #ff9dc5 );
+    }
+    footer{
+      background-image: linear-gradient(11deg, #76c6bb, #a6abaf, #b5ad7f, transparent );
+      color: white;
     }
     .flex-item.footer{
       text-align: center;
