@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'pastry-shop',
@@ -46,4 +48,9 @@ import { Component } from '@angular/core';
 })
 export class PastryShopComponent {
   currentYear: Date = new Date()
+
+  constructor(private domSanitizer: DomSanitizer, private fileReader: FileReader, private matIconRegistry: MatIconRegistry) {
+    matIconRegistry.addSvgIcon('cupcake', domSanitizer.bypassSecurityTrustResourceUrl('../../assets/images/cupcake.svg'))
+    matIconRegistry.addSvgIcon('wedding-cake', domSanitizer.bypassSecurityTrustResourceUrl('../../assets/images/wedding-cake.svg'))
+  }
 }

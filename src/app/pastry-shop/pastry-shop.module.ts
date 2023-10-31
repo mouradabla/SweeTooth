@@ -45,6 +45,9 @@ const routes: Routes = [
     MaterialModule,
     FormsModule,
     RouterModule.forChild(routes),
+  ],
+  providers: [
+    FileReader
   ]
 })
 export class PastryShopModule { }
